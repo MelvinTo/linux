@@ -242,6 +242,7 @@ err:
 }
 pure_initcall(sram_init);
 
+#ifdef NEVER_GOING_TO_BE_USED
 #ifdef CONFIG_PROC_FS
 static int sram_proc_show(struct seq_file *m, void *v)
 {
@@ -318,4 +319,5 @@ static int __init sram_proc_init(void)
 	return 0;
 }
 late_initcall(sram_proc_init);
+#endif
 #endif
